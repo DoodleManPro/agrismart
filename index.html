@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- ! LINKS AND CDNS -->
+    <link rel="stylesheet" href="./styles.css">
+
+
+    <!-- *PLAYFAIR DISPLAY ======================= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    
+
+
+    <!-- !HOME ================================================================================= -->
+
+    <section id="Home" class="section home">
+        <div class="green"></div>
+        <nav>
+            <img src="./img/logo.png" alt="" class="nav-logo" id="box">
+            <ul id="ul">
+                <li><a href="#Home" class="li1">Home</a></li>
+                <li><a href="#SOIL" class="li2">Soil</a></li>
+                <li><a href="#WEATHER" class="li3">Weather</a></li>
+                <li><a href="#CROP" class="li4">Crop</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <!-- <h1 class="hero-h1" id="paraLeft">AGRI <br> SMART</h1> -->
+            <div class="hero-heading-div" id="paraLeft">
+                <h1 class="hero-h1 anim-up">A</h1>
+                <h1 class="hero-h1 anim-up">G</h1>
+                <h1 class="hero-h1 anim-up">R</h1>
+                <h1 class="hero-h1 anim-up">I</h1>
+            </div>
+            <div class="hero-heading-div" id="paraLeft2">
+                <h1 class="hero-h1 anim-up">S</h1>
+                <h1 class="hero-h1 anim-up">M</h1>
+                <h1 class="hero-h1 anim-up">A</h1>
+                <h1 class="hero-h1 anim-up">R</h1>
+                <h1 class="hero-h1 anim-up">T</h1>
+            </div>
+            <spline-viewer class="spline para-right anim-opac" id="paraRight" url="https://prod.spline.design/H1HDT9qME0e-UFeY/scene.splinecode"></spline-viewer>
+        
+        </div>
+
+
+        <div class="video-banner">
+            <h3 class="video-banner-h3 anim-trig-up">
+                AI-Powered Smart <br> Irrigation App
+            </h3>
+            <div class="video scrub">
+                <video loop muted preload="" src="./img/video-banner.mp4"></video>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- !HORIZONTAL SCROLL =================================================================== -->
+
+    <section class="horizontal left-scrub">
+        <h1 class="hori">IRRIGATION</h1>
+    </section>
+
+
+
+
+
+    <!-- !SOIL ================================================================================= -->
+
+    <section class="home"></section>
+    
+    <section class="soil" id="SOIL">
+        <div class="app-heading soil-heading">
+            <h2 class="ah2 anim-right">Soil <br> Moisture</h2>
+        </div>
+
+
+        <div class="soil-graph">
+            <canvas id="myCanvas" class="anim-left"></canvas>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <!-- !WEATHER ================================================================================= -->
+    
+<section class="conditions" id="WEATHER">
+    <div class="app-heading soil-heading">
+        <h2 class="ah3 anim-left2">Weather <br> Conditions</h2>
+    </div>
+
+    <div class="card anim-up2">
+        <div class="search">
+          <input type="text" placeholder="Enter city name.." spellcheck="false">
+          <button><img src="./img/images/search.png"></button>
+        </div> 
+        <div class="error">
+          <p>Invalid city name</p>
+        </div>
+        <div class="weather">
+          <img src="./img/images/rain.png" class="weather-icon">
+          <h1 class="temp">22°c</h1>
+          <h2 class="city">New York</h2>
+          <div class="details">
+              <div class="col">
+                  <img src="./img/images/humidity.png"> 
+                  <div>
+                      <p class="humidity">50%</p>
+                      <p>Humidity</p>
+                  </div>
+              </div>
+              <div class="col">
+                  <img src="./img/images/wind.png"> 
+                  <div>
+                      <p class="wind">15 km/hr</p>
+                      <p>Wind Speed</p>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+</section>
+
+
+
+
+    <!-- !CROP ================================================================================= -->
+
+    <section class="crop" id="CROP">
+
+        <div class="app-heading soil-heading">
+            <h2 class="ah2 anim-right2">Crop <br> Type</h2>
+        </div>
+
+
+
+        <div class="holder" id="holder">
+            <div class="crop-type marg-top">
+                <input type="text" placeholder="Crop type" id="cropInp">
+                <button onclick="cropType()"><img src="./img/images/search.png" alt=""></button>
+            </div>
+            <div class="cons-data" id="consData">
+                <h1 id="cropResult" class="marg-top"></h1>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function cropType() {
+            
+            const cropResult = document.getElementById('cropResult');
+            
+            var cropInp = document.getElementById('cropInp');
+
+            const consData = document.getElementById('consData')
+            const holder = document.getElementById('holder')
+            var p = document.createElement('p');
+
+            p.classList.add('small')
+            p.innerHTML = 'Since <b id="cropSubResult"></b> doesnt require much water, and its going to rain anyway, the irrigation system will remain off today'
+
+            console.log(p)
+
+            consData.appendChild(p)
+            holder.appendChild(consData)
+
+            const cropSubResult = document.getElementById('cropSubResult');
+
+
+            cropResult.innerHTML = cropInp.value
+            cropSubResult.innerHTML = cropInp.value
+
+
+        }
+    </script>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ! FOOOTER ============================================================ -->
+
+    <footer>
+        <h1>Together, Greener 🌱</h1>
+        <p>By- Ameen Ahmed (12A)</p>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/gsap.js"></script>
+    
+
+    <script src="./js/parallax.js"></script>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.2.5/build/spline-viewer.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/app.js"></script>
+
+</body>
+</html>

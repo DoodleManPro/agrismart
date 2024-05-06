@@ -1,0 +1,458 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{ 
+    overflow-x: hidden;
+}
+
+:root {
+    --main-color: #BCAC9B;
+    --text: #2D232E;
+    --accent: #2D6050;
+}
+
+@font-face {
+    font-family: 'Open Sans Hebrew';
+    src: url(./texts/OSH/OpenSansHebrewCondensed-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: 'OSH Light';
+    src: url(./texts/OSH/OpenSansHebrewCondensed-Light.ttf);
+}
+
+@font-face {
+    font-family: 'designer';
+    src: url(./texts/designer/Designer.otf);
+}
+
+/* !HOME ========================================================================================== */
+
+.home {
+    width: 100%;
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 10em 0;
+}
+
+.green {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 70%;
+    height: 100vh;
+}
+.hero {
+    width: 90%;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+.hero-heading-div {
+    display: flex;
+}
+.hero-h1 {
+    font-size: 25em;
+    margin-left: 0em;
+    line-height: .8em;
+    overflow: hidden;
+    font-family: 'Open Sans Hebrew';
+    color: var(--text);
+}
+
+.spline {
+    position: absolute;
+    top: -8em;
+    right: -20em;
+    height: 45em;
+}
+
+
+.video-banner {
+    margin-top: 3em;
+    font-size: 3.5em;
+    font-family: 'OSH Light';
+    text-align: center;
+    color: var(--accent);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+    scale: .5;
+}
+
+
+
+
+
+
+
+
+
+/* NAV */
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    width: 5em;
+    margin: 1em;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none ;
+}
+
+
+nav ul li a{
+    opacity: 1;
+    position: relative;
+    margin: 0 1.7em;
+    font-size: 2em;
+    text-decoration: none;
+    color: var(--text);
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+    transition: .3s ease;
+}
+
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 00%;
+    height: .05em;
+    background-color: var(--text);
+    transition: .3s ease;
+}
+
+nav ul li a:hover {
+    font-weight: 900;
+}
+
+nav ul li a:hover::before {
+    width: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+
+
+
+
+
+
+
+
+/* ! HORIZONTAL SCROLL =================================================================================== */
+
+.horizontal {
+    background-color: var(--accent);
+    font-size: 25em;
+}
+
+.hori {
+    color: var(--main-color);
+    font-family: 'Open Sans Hebrew';
+}
+
+
+
+
+
+
+
+
+
+
+/* !SOIL ================================================================================== */
+
+.soil {
+    background-color: var(--main-color);
+    padding-bottom: 6em;
+}
+
+.app-heading {
+    font-family: 'Designer';
+
+}
+
+.ah2 {
+    font-size: 8em;
+    line-height: .9em;
+    text-align: right;
+    margin-right: 2em;
+    color: #887d71;
+}
+.ah3 {
+    font-size: 8em;
+    line-height: .9em;
+    text-align: left;
+    margin-left: 2em;
+    color: #887d71;  
+}
+
+.soil-graph {
+    width: 80%;
+    height: 50em;
+    margin: 10em auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas {
+    width: 100%;
+    color: var(--text);
+}
+
+
+
+
+
+
+
+
+/* ! WEATHERRRRRRRRRRRRRRRRRRR ===================================================== */
+
+.conditions {
+    background-color: var(--main-color);
+    padding-bottom: 6em;
+    width: 100%;
+}
+
+.crop {
+    background-color: var(--main-color);
+    padding-bottom: 6em;
+    width: 100%;
+}
+
+.card{
+    width: 80em;
+    background: var(--accent);
+    color: #fff;
+    margin: 100px auto 0;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+    font-family: 'OS Light';
+}
+.search{
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   font-size: 5em;
+}
+.search input{
+  border: 0;
+  outline: 0;
+  background: var(--main-color);
+  color: var(--text);
+  padding: 10px 25px;
+  height: 60px;
+  border-radius: 30px;
+  flex: 1;
+  margin-right: 16px ;
+  font-size: 18px;
+  font-family: 'OSH Light';
+    font-weight: 600;
+   font-size: .5em;
+
+
+}
+.search button {
+    border: 0;
+    outline: 0;
+    background: var(--main-color);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+.search button img{
+    width: 16px;
+}
+.weather-icon{
+    width: 20em;
+    margin-top: 30px;
+}
+.weather h1{
+   font-size: 8em;
+    font-weight: 500;
+}
+.weather h2{
+    font-size: 5em;
+    font-weight: 400;
+    margin-top: -10px;
+}
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+    font-family: 'OSH Light';
+    font-weight: 600;
+    font-size: 4em;
+
+}
+.col{
+    display: flex;
+    align-items:center;
+    text-align: left;
+}
+.col img{
+    width: 1.5em;
+    margin-right:.8em;
+}
+.humidity,.wind{
+    font-size: 28px;
+    margin-top: -6px;
+}
+.weather{
+    display: none;
+}
+.error{
+    text-align: center;
+    margin-left: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+    color: red;
+}
+
+.card h1 {
+    font-family: 'OSH Light';
+    font-weight: 900;
+}
+
+.card h2 {
+    font-family: 'OSH Light';
+
+}
+
+
+
+
+
+
+/* !CROP ============================================================= */
+
+.holder {
+    width: 75%;
+    background-color: var(--accent);
+    margin: 6em auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    flex-direction: column;
+    padding-bottom: 2em;
+    padding-top: 2em;
+}
+
+.crop-type {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.crop-type input {
+    border: 0;
+    outline: 0;
+    background: var(--main-color);
+    color: var(--text);
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px ;
+    font-size: 18px;
+    font-family: 'OSH Light';
+    font-weight: 600;
+    font-size: 2em;
+}
+
+.crop-type button {
+    border: 0;
+    outline: 0;
+    background: var(--main-color);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.crop-type img {
+    width: 50%;
+}
+
+.cons-data {
+    text-align: center;
+    margin-top: 1em;
+    font-family: 'OSH Light';
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cons-data h1 {
+    font-size: 4em;
+}
+
+.small {
+    font-size: 2em;
+    width: 50%;
+}
+
+
+footer {
+    width: 100%;
+    background-color: var(--text);
+    color: var(--main-color);
+    height: 20em;
+    position: relative;
+}
+
+footer h1 {
+    font-family: 'Open Sans Hebrew';
+    font-size: 9em;
+    text-align: center;
+    padding-top: .3em;
+}
+
+footer p {
+    font-family: 'OSH Light';
+    padding-top: .5em;
+    font-size: 2em;
+    font-weight: 800;
+    text-align: center;
+}
