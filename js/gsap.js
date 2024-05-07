@@ -76,7 +76,7 @@ gsap.to('.scrub', {
 
 
 gsap.to('.horizontal h1', {
-    transform: 'translateX(-80%)',
+    transform: 'translateX(-100%)',
     delay: 2,
 
     scrollTrigger: {
