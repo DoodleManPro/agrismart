@@ -59,7 +59,7 @@ body{
     display: flex;
 }
 .hero-h1 {
-    font-size: 20em;
+    font-size: 25em;
     margin-left: 0em;
     line-height: .8em;
     overflow: hidden;
@@ -222,6 +222,7 @@ nav ul li a:hover::before {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 canvas {
@@ -455,4 +456,70 @@ footer p {
     font-size: 2em;
     font-weight: 800;
     text-align: center;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .spline {
+        display: none;
+    }
+
+    .hori {
+        display: none;
+    }
+
+    .horizontal {
+        display: none;
+    }
+    nav {
+        display: none;
+    }
+
+    * {
+        overflow-x: hidden;
+    }
+    .hero {
+        padding-top: 5em;
+    }
+    .hero-h1 {
+        font-size: 8em;
+    }
+    .ah2 {
+        font-size: 4.5em;
+        text-align: center;
+        margin: 0;
+
+    }
+
+    .ah3 {
+        font-size: 4em;
+        text-align: center;
+        margin: 0;
+        margin-top: -0em;
+    }
+
+    canvas {
+        margin-top: 0em;
+    }
+
+    .soil-graph {
+        margin: 0 auto;
+        height: 30em;
+    }
+    .soil {
+        padding: 0;
+    }
+
+    .home {
+        padding: 0;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    footer h1 {
+        font-size: 4em;
+    }
 }
